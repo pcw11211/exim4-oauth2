@@ -1,6 +1,7 @@
 # exim4-oauth2
 
 the needed configuration to make exim4 utilize xoauth2 authentication and be able to use gmail for sending out email:
+base on https://developers.google.com/gmail/imap/xoauth2-protocol
 
 1. configure exim4 per your needs
    for sending out only:
