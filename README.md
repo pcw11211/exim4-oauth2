@@ -17,7 +17,7 @@ based on https://developers.google.com/gmail/imap/xoauth2-protocol
 2. you need to get client_id and client secret
   there are a lot of resources on goole how to get client is and secret
   basically you need to create an app and publish it for public (or only for your user)
-3. generate refresh token in oauth playground:
+3. generate refresh token in oauth playground: https://www.youtube.com/watch?v=hfWe1gPCnzc
   there are a lot of resources on goole how to do this also
   make sure to use your client id and secret in oauth playground
   select "https://mail.google.com/" as scope (you can use sub categories like read-only or send-only scope depending on your needs)
