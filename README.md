@@ -3,8 +3,8 @@
 the needed configuration to make exim4 utilize xoauth2 authentication and be able to use gmail for sending out email  
 based on https://developers.google.com/gmail/imap/xoauth2-protocol
 
-1. configure exim4 per your needs
-   for sending out only:
+1. configure exim4 per your needs  
+   for sending out only:  
    - run dpkg-reconfigure exim4-config
    - mail sent by smarthost; no local mail
    - System mail name: localhost
@@ -14,16 +14,16 @@ based on https://developers.google.com/gmail/imap/xoauth2-protocol
    - Setting Outbound Mailbox Destination: smtp.gmail.com::587
    - Keep number of DNS-queries minimal (Dial-on-Demand)? No
    - Split configuration file into small files? Yes
-2. you need to get client_id and client secret
-  there are a lot of resources on goole how to get client is and secret
-  basically you need to create an app and publish it for public (or only for your user)
-3. generate refresh token in oauth playground: https://www.youtube.com/watch?v=hfWe1gPCnzc
-  there are a lot of resources on goole how to do this also
-  make sure to use your client id and secret in oauth playground
+2. you need to get client_id and client secret  
+  there are a lot of resources on goole how to get client is and secret  
+  basically you need to create an app and publish it for public (or only for your user)  
+3. generate refresh token in oauth playground: https://www.youtube.com/watch?v=hfWe1gPCnzc  
+  there are a lot of resources on goole how to do this also  
+  make sure to use your client id and secret in oauth playground  
   select "https://mail.google.com/" as scope (you can use sub categories like read-only or send-only scope depending on your needs)
 4. authorize your app with desired gmail account to give app api access to your account and to recieve refresh token
 5. put get_bearer_tocken.sh script in /etc/exim4 folder
-6. set variales in get_bearer_tocken.sh with correct values
+6. set variales in get_bearer_tocken.sh with correct values  
    - client id
    - client secret
    - refresh token
